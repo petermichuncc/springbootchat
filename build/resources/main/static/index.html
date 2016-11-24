@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>Spring boot and Rethinkdb Chat</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
-
+<div ng-app="">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p ng-bind="name"></p>
+</div>
 <div id="container">
     <div id="chat">
         <ul id="messages">
