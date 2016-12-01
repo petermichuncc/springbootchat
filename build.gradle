@@ -7,7 +7,8 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath 'io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE'
+    classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
+  
     }
 }
 
@@ -16,7 +17,6 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: "io.spring.dependency-management"
-
 jar {
     baseName = 'boot-rethinkdb'
     version = '0.0.1-SNAPSHOT'
@@ -26,15 +26,13 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
-      maven {
-      url "https://plugins.gradle.org/m2/"
-    }
     maven {
         url "https://oss.sonatype.org/service/local/repositories/snapshots/content"
     }
 }
 
 dependencies {
+    
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-websocket')
     compile('org.springframework.boot:spring-boot-devtools')
@@ -48,7 +46,6 @@ dependencies {
 
     compile 'com.rethinkdb:rethinkdb-driver:2.2-b1-SNAPSHOT'
     testCompile('org.springframework.boot:spring-boot-starter-test')
-
 }
 
 
